@@ -1,0 +1,27 @@
+{
+  "name": "@finance/api",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@elysiajs/jwt": "^1.0.2",
+    "drizzle-orm": "^0.30.6",
+    "elysia": "^1.0.9",
+    "nanoid": "^5.0.6",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/pg": "^8.11.4",
+    "bun-types": "^1.0.35",
+    "drizzle-kit": "^0.20.14"
+  },
+  "module": "src/index.ts",
+  "bun-create": {
+    "start": "bun run src/index.ts"
+  }
+}
